@@ -61,6 +61,7 @@ public class VentanaLogin extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(12, 0, 99));
 
+        password.setText("admin");
         password.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 passwordKeyTyped(evt);
@@ -71,6 +72,7 @@ public class VentanaLogin extends javax.swing.JFrame {
         lblUsuario.setForeground(new java.awt.Color(255, 255, 255));
         lblUsuario.setText("Usuario");
 
+        txtUsuario.setText("admin");
         txtUsuario.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtUsuarioKeyTyped(evt);
