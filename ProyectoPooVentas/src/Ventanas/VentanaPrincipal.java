@@ -1,5 +1,6 @@
 package Ventanas;
 /**
+ * Proyecto Bimestral Programación Orientada a Objetos
  * @author davisalex22
  */
 public class VentanaPrincipal extends javax.swing.JFrame {
@@ -16,7 +17,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnCerrarSistema = new javax.swing.JButton();
         btnIrLogin = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnIrSistema = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -44,11 +45,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/supermercado.png"))); // NOI18N
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ventas.png"))); // NOI18N
-        jButton1.setText("Ir a Sistema");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnIrSistema.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ventas.png"))); // NOI18N
+        btnIrSistema.setText("Ir a Sistema");
+        btnIrSistema.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnIrSistemaActionPerformed(evt);
             }
         });
 
@@ -62,7 +63,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(btnIrLogin)
                         .addGap(96, 96, 96)
-                        .addComponent(jButton1)
+                        .addComponent(btnIrSistema)
                         .addGap(127, 127, 127))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(jPanel1Layout.createSequentialGroup()
@@ -86,7 +87,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addGap(35, 35, 35)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnIrLogin)
-                    .addComponent(jButton1))
+                    .addComponent(btnIrSistema))
                 .addContainerGap(61, Short.MAX_VALUE))
         );
 
@@ -103,22 +104,31 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    /**
+     * Metodo de boton Salir
+     * @param evt 
+     */
     private void btnCerrarSistemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarSistemaActionPerformed
         dispose();
     }//GEN-LAST:event_btnCerrarSistemaActionPerformed
-
+    /**
+     * Metodo de boton ir a Ventana Login
+     * @param evt 
+     */
     private void btnIrLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIrLoginActionPerformed
         VentanaLogin vl = new VentanaLogin();
         vl.setVisible(true);
         dispose();
     }//GEN-LAST:event_btnIrLoginActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    /**
+     * Metodo de boton ir a Ventana Producto
+     * @param evt 
+     */
+    private void btnIrSistemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIrSistemaActionPerformed
         VentanaProductos vp = new VentanaProductos();
         vp.setVisible(true);
         dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnIrSistemaActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -146,6 +156,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new VentanaPrincipal().setVisible(true);
             }
@@ -155,7 +166,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCerrarSistema;
     private javax.swing.JButton btnIrLogin;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnIrSistema;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblSupermercado;

@@ -1,10 +1,13 @@
 package Ventanas;
+/**
+ * Proyecto Bimestral Programación Orientada a Objetos
+ * @author davisalex22
+ */
+
 // Importación de Librerias
 import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
-/**
- * @author davisalex22
- */
+
 public class VentanaLogin extends javax.swing.JFrame {
 
     public VentanaLogin() {
@@ -164,21 +167,50 @@ public class VentanaLogin extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    /**
+     * Metodo evento de teclado enter para campo password
+     * @param evt 
+     */
     private void passwordKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_passwordKeyTyped
-        char cTeclaPresionada = evt.getKeyChar();
-        if (cTeclaPresionada == KeyEvent.VK_ENTER) {
-            btnEntrar.doClick();
+        String Usuario = "admin";
+        String Contrasenia = "admin";
+        String Pass = new String(password.getPassword());
+        if (txtUsuario.getText().equals(Usuario)&& Pass.equals(Contrasenia)) {
+            char cTeclaPresionada = evt.getKeyChar();
+            if (cTeclaPresionada == KeyEvent.VK_ENTER) {
+                VentanaPrincipal vp = new VentanaPrincipal();
+                vp.setVisible(true);
+                dispose();
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(null,"Usuario o Contraseña Incorrecta");
         }
     }//GEN-LAST:event_passwordKeyTyped
-
+    /**
+     * Evento de teclado enter para campo usuario
+     * @param evt 
+     */
     private void txtUsuarioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtUsuarioKeyTyped
-        char cTeclaPresionada = evt.getKeyChar();
-        if (cTeclaPresionada == KeyEvent.VK_ENTER) {
-            btnEntrar.doClick();
+        String Usuario = "admin";
+        String Contrasenia = "admin";
+        String Pass = new String(password.getPassword());
+        if (txtUsuario.getText().equals(Usuario)&& Pass.equals(Contrasenia)) {
+            char cTeclaPresionada = evt.getKeyChar();
+            if (cTeclaPresionada == KeyEvent.VK_ENTER) {
+                VentanaPrincipal vp = new VentanaPrincipal();
+                vp.setVisible(true);
+                dispose();
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(null,"Usuario o Contraseña Incorrecta");
         }
     }//GEN-LAST:event_txtUsuarioKeyTyped
-    // Creacion  de usuario y clave
+    /**
+     * Evento de mouse click para boton entrar
+     * @param evt 
+     */
     private void btnEntrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEntrarMouseClicked
         String Usuario = "admin";
         String Contrasenia = "admin";
@@ -192,7 +224,10 @@ public class VentanaLogin extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null,"Usuario o Contraseña Incorrecta");
         }
     }//GEN-LAST:event_btnEntrarMouseClicked
-
+    /**
+     * Evento de mouse click para boton salir
+     * @param evt 
+     */
     private void bntSalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bntSalirMouseClicked
         dispose();
     }//GEN-LAST:event_bntSalirMouseClicked
@@ -226,6 +261,7 @@ public class VentanaLogin extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new VentanaLogin().setVisible(true);
             }

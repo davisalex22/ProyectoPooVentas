@@ -1,11 +1,13 @@
 package Ventanas;
+/**
+ * Proyecto Bimestral Programación Orientada a Objetos
+ * @author davisalex22
+ */
 // Importacion de libreria
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.JOptionPane;
-/**
- * @author davisalex22
- */
+
 public class VentanaFactura extends javax.swing.JFrame {
     public VentanaFactura() {
         initComponents();
@@ -103,7 +105,7 @@ public class VentanaFactura extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "ID Producto", "Nombre", "Cantidad", "Precio"
+                "Nombre", "Cantidad", "Precio Total", "Iva"
             }
         ));
         jTableStock.setRowHeight(20);
@@ -234,12 +236,13 @@ public class VentanaFactura extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(6, 6, 6)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel11)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(16, 16, 16)
+                        .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(jLabel11)))
                 .addGap(35, 35, 35)
                 .addComponent(btnCompraFinal)
                 .addContainerGap())

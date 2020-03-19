@@ -1,6 +1,6 @@
 package Ventanas;
-
 /**
+ * Proyecto Bimestral Programación Orientada a Objetos
  * @author davisalex22
  */
 // Importacion de librerias
@@ -215,11 +215,6 @@ public class VentanaProductos extends javax.swing.JFrame {
         jLabel24.setText("Tipo de Producto :");
 
         cbxTipoProducto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione...", "Oficina", "Comestibles", "Ferreteria", "Medicina", "Educación", "Tecnología" }));
-        cbxTipoProducto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbxTipoProductoActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -498,7 +493,7 @@ public class VentanaProductos extends javax.swing.JFrame {
                             .addComponent(btnEliminar))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanelVentanaStockLayout.createSequentialGroup()
-                        .addGap(18, 57, Short.MAX_VALUE)
+                        .addGap(18, 18, Short.MAX_VALUE)
                         .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(43, 43, 43)
                         .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -556,23 +551,6 @@ public class VentanaProductos extends javax.swing.JFrame {
 
         jLabel23.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel23.setText("Id o Nombre :");
-
-        txtBusquedaVenta.addCaretListener(new javax.swing.event.CaretListener() {
-            public void caretUpdate(javax.swing.event.CaretEvent evt) {
-                txtBusquedaVentaCaretUpdate(evt);
-            }
-        });
-        txtBusquedaVenta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtBusquedaVentaActionPerformed(evt);
-            }
-        });
-
-        txtCantidadVenta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCantidadVentaActionPerformed(evt);
-            }
-        });
 
         btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/busqueda.png"))); // NOI18N
         btnBuscar.setText("Buscar");
@@ -637,18 +615,14 @@ public class VentanaProductos extends javax.swing.JFrame {
                             .addComponent(jLabel27))
                         .addGap(6, 6, 6)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtPrecioVenta, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtTipoVenta, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnEliminarProducto))
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtNombreProductoVenta, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtIDVenta, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
-                                .addComponent(btnComprar))))
+                            .addComponent(txtPrecioVenta, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtTipoVenta, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtNombreProductoVenta, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtIDVenta, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnComprar)
+                            .addComponent(btnEliminarProducto)))
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel7Layout.createSequentialGroup()
@@ -665,8 +639,8 @@ public class VentanaProductos extends javax.swing.JFrame {
                                 .addComponent(jLabel28)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txtCantidadActual, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(59, 59, 59))
+                        .addGap(0, 43, Short.MAX_VALUE)))
+                .addGap(57, 57, 57))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -689,7 +663,7 @@ public class VentanaProductos extends javax.swing.JFrame {
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel17)
                             .addComponent(txtNombreProductoVenta, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel22)
                             .addComponent(txtPrecioVenta, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -701,15 +675,16 @@ public class VentanaProductos extends javax.swing.JFrame {
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel21)
                             .addComponent(txtCantidadVenta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtCantidadActual, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(6, 6, 6)
                         .addComponent(btnComprar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnEliminarProducto)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(txtCantidadActual, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -770,7 +745,7 @@ public class VentanaProductos extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(66, 66, 66)
-                        .addComponent(lblNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
+                        .addComponent(lblNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
                         .addGap(18, 18, 18))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -845,7 +820,7 @@ public class VentanaProductos extends javax.swing.JFrame {
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                .addContainerGap(117, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnIrPrincipal)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel18)
@@ -1107,7 +1082,6 @@ public class VentanaProductos extends javax.swing.JFrame {
 
     /**
      * Metodo btn para ir a VentanaFactura
-     *
      * @param evt
      */
     private void btnIrFacturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIrFacturaActionPerformed
@@ -1116,7 +1090,6 @@ public class VentanaProductos extends javax.swing.JFrame {
     }//GEN-LAST:event_btnIrFacturaActionPerformed
     /**
      * Metodo btn para ir a VentanaPrincipal
-     *
      * @param evt
      */
     private void btnIrPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIrPrincipalActionPerformed
@@ -1126,15 +1099,13 @@ public class VentanaProductos extends javax.swing.JFrame {
     }//GEN-LAST:event_btnIrPrincipalActionPerformed
     /**
      * Metodo btn para salir del programa
-     *
      * @param evt
      */
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
         dispose();
     }//GEN-LAST:event_btnSalirActionPerformed
     /**
-     * Metodo btn para Seleccionar producto desde stock a ventas
-     *
+     * Metodo btn para Buscar producto desde stock a ventas
      * @param evt
      */
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
@@ -1157,7 +1128,6 @@ public class VentanaProductos extends javax.swing.JFrame {
 
     /**
      * Metodo que agrega producto a comprar a la jTableVenta
-     *
      * @param evt
      */
     private void btnComprarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComprarActionPerformed
@@ -1209,7 +1179,6 @@ public class VentanaProductos extends javax.swing.JFrame {
 
     /**
      * Metodo para presentar en el textField la fecha actual del Sistema
-     *
      * @param evt
      */
     private void jTextFieldFechaAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jTextFieldFechaAncestorAdded
@@ -1217,7 +1186,6 @@ public class VentanaProductos extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextFieldFechaAncestorAdded
     /**
      * Metodo KeyPressed para activar tecla ENTER
-     *
      * @param evt
      */
     private void txtImporteKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtImporteKeyPressed
@@ -1229,7 +1197,6 @@ public class VentanaProductos extends javax.swing.JFrame {
     }//GEN-LAST:event_txtImporteKeyPressed
     /**
      * Metodo eliminar producto de la tabla jTableVenta
-     *
      * @param evt
      */
     private void btnEliminarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarProductoActionPerformed
@@ -1271,9 +1238,42 @@ public class VentanaProductos extends javax.swing.JFrame {
         txtValorVenta.setText("" + df.format(total));
         txtIVA.setText("" + df.format(ivaTotal));
         txtValorPagar.setText("" + df.format(totalPagar));
- 
-    }//GEN-LAST:event_btnEliminarProductoActionPerformed
+        // Actualizar Stock
+        String valor = txtBusquedaVenta.getText();
+        for (int i = 0; i < jTableStock.getRowCount(); i++) {
+            if (jTableStock.getValueAt(i, 0).equals(valor)) {
+                jTableStock.changeSelection(i, 0, false, false);
+            }
+            if (jTableStock.getValueAt(i, 1).equals(valor)) {
+                jTableStock.changeSelection(i, 1, false, false);
+            }
+        }
+        filaSeleccionada = jTableStock.getSelectedRow();
+        int x = Integer.parseInt(txtCantidadVenta.getText());
+        int y = Integer.parseInt(txtCantidadActual.getText());        
+            int CantidadActual = y + x;
 
+            if (valor.isEmpty()) {
+                jTableStock.clearSelection();
+            }else{
+                for (int i = 0; i < jTableStock.getRowCount(); i++) {
+                    if (jTableStock.getValueAt(i,0).equals(valor)) {                       
+                        jTableStock.changeSelection(i,0,false,false);
+                        
+                    }
+                    if (jTableStock.getValueAt(i,1).equals(valor)) {
+                    jTableStock.changeSelection(i,1,false,false);
+                    }
+                }
+                int filaSelec = jTableStock.getSelectedRow();
+                jTableStock.setValueAt(CantidadActual,filaSelec,2);
+            }                  
+        
+    }//GEN-LAST:event_btnEliminarProductoActionPerformed
+    /**
+     * Metodo btn para registrar Producto en jTableStock
+     * @param evt 
+     */
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
         Stock stock = new Stock(txtIDProducto.getText(),txtNombreProducto.getText(),
                 Integer.parseInt(txtCantidad.getText()),Double.parseDouble(txtPrecio.getText()),cbxTipoProducto.getSelectedItem().toString());
@@ -1285,11 +1285,10 @@ public class VentanaProductos extends javax.swing.JFrame {
         txtPrecio.setText(""); 
         cbxTipoProducto.setSelectedItem("Seleccione...");
     }//GEN-LAST:event_btnRegistrarActionPerformed
-
-    private void cbxTipoProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxTipoProductoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbxTipoProductoActionPerformed
-
+    /**
+     * Metodo btn para eliminar fila de producto de jTableStock
+     * @param evt 
+     */
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
         for (int i = 0; i < lista.size(); i++) {
             if (NombreProducto.equals(lista.get(i).getNombreProducto())) {
@@ -1315,15 +1314,23 @@ public class VentanaProductos extends javax.swing.JFrame {
         jTableStock.setRowHeight(20);
         jScrollPane1.setViewportView(jTableStock);
     }//GEN-LAST:event_btnEliminarActionPerformed
-
+    
+    /**
+     * Metodo btn para modificar fila producto de jTableStock
+     * @param evt 
+     */
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
+        txtEditarID.setText(ID_Producto);
         txtEditarNombreProducto.setText(NombreProducto);
         txtEditarCantidad.setText(Integer.toString(Cantidad));
         txtEditarPrecio.setText(Double.toString(Precio));
         txtEditarTP.setText(TipoProducto);
           
     }//GEN-LAST:event_btnModificarActionPerformed
-
+    /**
+     * Metodo btn para terminar edicion de fila producto de jTableStock
+     * @param evt 
+     */
     private void btnTerminarEdicionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTerminarEdicionActionPerformed
         for (int i = 0; i < lista.size(); i++) {
             if (txtEditarNombreProducto.getText().equals(lista.get(i).getNombreProducto())) {
@@ -1359,19 +1366,7 @@ public class VentanaProductos extends javax.swing.JFrame {
         jTableStock.setRowHeight(20);
         jScrollPane1.setViewportView(jTableStock);
     }//GEN-LAST:event_btnTerminarEdicionActionPerformed
-
-    private void txtBusquedaVentaCaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_txtBusquedaVentaCaretUpdate
-      
-    }//GEN-LAST:event_txtBusquedaVentaCaretUpdate
-
-    private void txtCantidadVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCantidadVentaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtCantidadVentaActionPerformed
-
-    private void txtBusquedaVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBusquedaVentaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtBusquedaVentaActionPerformed
-        /**
+    /**
      * Metodo mostrar jTable de Stock
      */
     public void mostrarStock() {
@@ -1392,9 +1387,7 @@ public class VentanaProductos extends javax.swing.JFrame {
         ));
         jTableStock.setRowHeight(20);
         jScrollPane1.setViewportView(jTableStock);
-
     }
-
     /**
      * Metodo mostrar jTable de Venta
      */
