@@ -1083,7 +1083,8 @@ public class VentanaSistemaVentas extends javax.swing.JFrame {
      * @param evt
      */
     private void btnIrFacturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIrFacturaActionPerformed
-        JOptionPane.showMessageDialog(null, "!!GRACIAS POR SU COMPRA!!");
+        JOptionPane.showMessageDialog(null, String.format("       SUPERMERCADO\nCliente: %s\nCédula: %s\nFecha: %s\n%s\n",
+                txtNombreCliente.getText(),txtCedula.getText(),jTextFieldFecha.getText(),"!!GRACIAS POR SU COMPRA!!"));
     }//GEN-LAST:event_btnIrFacturaActionPerformed
     /**
      * Metodo btn para ir a VentanaPrincipal
