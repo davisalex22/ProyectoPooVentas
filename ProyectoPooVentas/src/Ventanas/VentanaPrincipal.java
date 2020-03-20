@@ -17,7 +17,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnCerrarSistema = new javax.swing.JButton();
         btnIrLogin = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
-        btnIrSistema = new javax.swing.JButton();
+        btnIrVentas = new javax.swing.JButton();
+        btnStock = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -45,11 +46,19 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/supermercado.png"))); // NOI18N
 
-        btnIrSistema.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ventas.png"))); // NOI18N
-        btnIrSistema.setText("Ir a Sistema");
-        btnIrSistema.addActionListener(new java.awt.event.ActionListener() {
+        btnIrVentas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ventas.png"))); // NOI18N
+        btnIrVentas.setText("Ir a Ventas");
+        btnIrVentas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnIrSistemaActionPerformed(evt);
+                btnIrVentasActionPerformed(evt);
+            }
+        });
+
+        btnStock.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/stock.png"))); // NOI18N
+        btnStock.setText("Ir a Stock");
+        btnStock.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnStockActionPerformed(evt);
             }
         });
 
@@ -58,21 +67,21 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(116, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnCerrarSistema))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(64, 64, 64)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(btnIrLogin)
-                        .addGap(96, 96, 96)
-                        .addComponent(btnIrSistema)
-                        .addGap(127, 127, 127))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(233, 233, 233))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(lblSupermercado)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnCerrarSistema)))))
+                        .addGap(68, 68, 68)
+                        .addComponent(btnStock))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(lblSupermercado)
+                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                .addComponent(btnIrVentas)
+                .addGap(29, 29, 29))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -87,8 +96,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addGap(35, 35, 35)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnIrLogin)
-                    .addComponent(btnIrSistema))
-                .addContainerGap(61, Short.MAX_VALUE))
+                    .addComponent(btnStock)
+                    .addComponent(btnIrVentas))
+                .addContainerGap(69, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -121,14 +131,23 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btnIrLoginActionPerformed
     /**
-     * Metodo de boton ir a Ventana Producto
+     * Metodo de boton ir a Ventana Sistema Ventas
      * @param evt 
      */
-    private void btnIrSistemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIrSistemaActionPerformed
-        VentanaProductos vp = new VentanaProductos();
+    private void btnIrVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIrVentasActionPerformed
+        VentanaSistemaVentas vp = new VentanaSistemaVentas();
         vp.setVisible(true);
         dispose();
-    }//GEN-LAST:event_btnIrSistemaActionPerformed
+    }//GEN-LAST:event_btnIrVentasActionPerformed
+    /**
+     * Metodo btn ir a Ventana Sistema Ventas
+     * @param evt 
+     */
+    private void btnStockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStockActionPerformed
+        VentanaSistemaVentas vp = new VentanaSistemaVentas();
+        vp.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnStockActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -166,7 +185,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCerrarSistema;
     private javax.swing.JButton btnIrLogin;
-    private javax.swing.JButton btnIrSistema;
+    private javax.swing.JButton btnIrVentas;
+    private javax.swing.JButton btnStock;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblSupermercado;
